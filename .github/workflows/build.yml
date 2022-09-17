@@ -29,12 +29,3 @@ jobs:
 
       - name: Build
         run: trunk build
-
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          build_dir: dist
-          fqdn: surway.hovland.xyz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
